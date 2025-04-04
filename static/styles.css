@@ -1,0 +1,292 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Navigation */
+nav {
+    background: #333;
+    color: #fff;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    text-align: center;
+    display: block;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background: #555;
+}
+
+/* Forms */
+form {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+    background: #555;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Schedule table specific styles */
+.schedule-table {
+    min-width: 100%;
+    margin-bottom: 30px;
+    table-layout: fixed;
+}
+
+.schedule-table th {
+    background-color: #333;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    white-space: nowrap;     /* Prevent wrapping */
+}
+
+.schedule-table th:first-child {
+    width: 80px;
+    white-space: nowrap;     /* Prevent wrapping */
+}
+
+.schedule-table td {
+    height: 30px;            /* Reduced from 50px */
+    vertical-align: middle;  /* Changed from top to middle */
+    text-align: center;      /* Center text horizontally */
+    transition: background-color 0.2s;
+    overflow: hidden;
+    font-size: 11px;         /* Reduced from 12px */
+    padding: 3px;            /* Reduced from 5px */
+}
+
+.schedule-table td:hover {
+    background-color: #f0f0f0;
+}
+
+.schedule-entry {
+    border-radius: 3px;
+    padding: 3px;            /* Reduced from 5px */
+    font-size: 10px;         /* Reduced from 11px */
+    text-align: center;      /* Center text in entries */
+    line-height: 1.1;        /* Reduced from 1.2 */
+    margin: 0 auto;          /* Center the entry in the cell */
+}
+
+/* Enhanced schedule entry styling with improved typography */
+.schedule-entry strong, 
+.schedule-entry b {
+    font-weight: bold;
+    display: inline;
+    margin: 0;
+    color: #333;
+}
+
+.schedule-entry em, 
+.schedule-entry i {
+    font-style: italic;
+    display: inline;
+    margin: 0;
+    color: #555;
+}
+
+.schedule-section {
+    margin-bottom: 40px;
+    clear: both;
+}
+
+/* Empty schedule cell */
+.empty-cell {
+    color: #ccc;
+    font-style: italic;
+}
+
+/* Button styles */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 8px 0;
+}
+
+/* Classes for button margin control */
+.no-margin {
+    margin: 0 !important;
+}
+
+/* Inline form for buttons */
+.inline-form {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+    font-size: 14px;
+    margin: 0;
+}
+
+.btn-primary {
+    background: #333;
+    color: white !important;
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: white !important;
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+.btn-primary:hover {
+    background: #555;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+}
+
+/* Schedule container */
+.schedule-container {
+    overflow-x: auto;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Messages */
+.success, .error {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Filter section */
+.filter-section {
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.filter-section h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.filter-section h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+/* Filter buttons section */
+.filter-buttons {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.filter-buttons h3 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #444;
+}
